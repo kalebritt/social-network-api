@@ -8,5 +8,5 @@ const thoughtRoutes = require("./thoughtRoutes");
 router.use("./userRoutes.js");
 //thought route
 router.use("./thoughtRoutes.js");
-
 //module.exports
+module.exports = router;
