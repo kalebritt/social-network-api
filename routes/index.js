@@ -5,3 +5,10 @@ const router = require("express").Router();
 const apiRoutes = require("./api/");
 
 //use routes
+router.use("/", apiRoutes);
+
+//think twice, friendo
+router.use((req, res) => res.send("Think twice, friendo."));
+
+//module.exports
+module.exports = router;
