@@ -16,16 +16,16 @@
 # Description:book:
 
 ```
-tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog is a tech blog
+friends for friends!
 ```
 
 # User Story:feelsgood:
 
-Want to write about fun tech stuff?  This is your place to do just that!  Write some words, read the words of others, all under your own unique profile.  
+ 
 
 # Website Preview:movie_camera:
--Screenshots and more!:arrow_down:<br>
-![Screenshot of Login Page](/assets/screenshots/tech_blog_screenshot.png)<br>
+-Screenshot!:arrow_down:<br>
+![Screenshot of Login Page]()<br>
 
 
 # Technologies:computer:
