@@ -26,3 +26,14 @@ const thoughtText = new Schema(
     id: false,
   }
 );
+
+const reactionsSchema = new Schema({
+  reactionId: {
+    type: Schema.Types.ObjectId(),
+  },
+  reactionBody: {
+    type: String,
+    required: true,
+    maxlength: 280,
+  },
+});
