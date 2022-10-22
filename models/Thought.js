@@ -52,4 +52,17 @@ const reactionSchema = new Schema({
     maxlength: 280,
   },
   //username
+  username: {
+    type: String,
+    required: true,
+  },
+  //createdAt
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => {
+      return new Date(timestamp).toLocaleString;
+    },
+    reactions: [reactionsSchema],
+  },
 });
