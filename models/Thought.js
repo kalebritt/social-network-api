@@ -64,3 +64,10 @@ const reactionSchema = new Schema(
     id: false,
   }
 );
+
+//total count of friends
+thoughtSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
+});
+
+//User model using userSchema
