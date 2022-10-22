@@ -19,4 +19,10 @@ const userSchema = new Schema({
       "Wrong email, wise guy",
     ],
   },
+  thoughts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Thought",
+    },
+  ],
 });
