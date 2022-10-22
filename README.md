@@ -33,13 +33,10 @@ Want to write about fun tech stuff?  This is your place to do just that!  Write 
 [-Express: Handlebars](https://handlebarsjs.com/)<br>
 [-Node.js](https://nodejs.org/en/)<br>
 [-MySQL](https://www.mysql.com/)<br>
-[-Bootstrap](https://getbootstrap.com/)<br>
-[-HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)<br>
-[-CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)<br>
+[Mongoose](https://mongoosejs.com/)
 
 # Collaborators:muscle:
 -[Kaleb Rittenhouse](https://github.com/kalebritt)<br>
-and a special thank you to George, Kirtly, and Dan!!!!!
 
 # Resources:mag:
 [Google](https://www.google.com/) is always a great resource.
