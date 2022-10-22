@@ -13,6 +13,6 @@ const thoughtText = new Schema({
     type: true,
     required: true,
     minlength: 1,
-    max: 280,
+    maxlength: 280,
   },
 });
