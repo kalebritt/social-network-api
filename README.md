@@ -33,7 +33,7 @@ friends for friends!
 [-Express: Handlebars](https://handlebarsjs.com/)<br>
 [-Node.js](https://nodejs.org/en/)<br>
 [-MySQL](https://www.mysql.com/)<br>
-[Mongoose](https://mongoosejs.com/)
+[-Mongoose](https://mongoosejs.com/)
 
 # Collaborators:muscle:
 -[Kaleb Rittenhouse](https://github.com/kalebritt)<br>
