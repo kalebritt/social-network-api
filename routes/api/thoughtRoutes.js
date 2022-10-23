@@ -22,4 +22,8 @@ router
   .put(updateThought)
   .delete(deleteThought);
 
-  ///api/thoughts/:thougthId/reations Post new reactions
+///api/thoughts/:thougthId/reations Post new reactions
+router.route("/:thoughtId/reactions").post(createReaction);
+
+//delete reaction
+
