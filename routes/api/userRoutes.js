@@ -13,3 +13,7 @@ const {
 } = require("../../controllers/userControllers");
 
 //get all and post
+router.route("/").get(getUser).post(createUser);
+
+//get one, put and delete by user Id
+
