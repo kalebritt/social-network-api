@@ -1,34 +1,7 @@
-const { Schema, model, Types } = require("mongoose");
 // const moment = require("moment");
-
-//thoughtText schema
-const thoughtSchema = new Schema(
-  {
-    thoughtText: {
-      type: true,
-      required: true,
-      minlength: 1,
-      maxlength: 280,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (timestamp) => {
-        return new Date(timestamp).toLocaleString;
-      },
-      reactions: [reactionSchema],
-    },
-  },
-  {
-    toJSON: {
-      virtuals: true,
-      getters: true,
-    },
-    id: false,
-  }
-);
+const { Schema, model, Types } = require("mongoose");
 //reactionSchema
-const reactionSchema = new Schema(
+const reactionsSchema = new Schema(
   {
     reactionId: {
       type: Schema.Types.ObjectId,
@@ -54,7 +27,34 @@ const reactionSchema = new Schema(
       },
     },
 
-    reaction: [reactionSchema],
+    reactions: [reactionsSchema],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+    id: false,
+  }
+);
+
+//thoughtText schema
+const thoughtsSchema = new Schema(
+  {
+    thoughtText: {
+      type: true,
+      required: true,
+      minlength: 1,
+      maxlength: 280,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (timestamp) => {
+        return new Date(timestamp).toLocaleString;
+      },
+      reactions: [reactionsSchema],
+    },
   },
   {
     toJSON: {
@@ -66,12 +66,12 @@ const reactionSchema = new Schema(
 );
 
 //total count of friends
-thoughtSchema.virtual("reactionCount").get(function () {
+thoughtsSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
 //User model using userSchema
-const Thought = model("Thought", thoughtSchema);
+const Thought = model("Thought", thoughtsSchema);
 
 //module.exports
 module.exports = Thought;
