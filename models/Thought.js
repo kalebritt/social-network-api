@@ -2,7 +2,7 @@ const { Schema, model, Types } = require("mongoose");
 // const moment = require("moment");
 
 //thoughtText schema
-const thoughtText = new Schema(
+const thoughtSchema = new Schema(
   {
     thoughtText: {
       type: true,
@@ -16,7 +16,7 @@ const thoughtText = new Schema(
       get: (timestamp) => {
         return new Date(timestamp).toLocaleString;
       },
-      reactions: [reactionsSchema],
+      reactions: [reactionSchema],
     },
   },
   {
