@@ -11,3 +11,8 @@ const {
   createReaction,
   deleteReaction,
 } = require("../../controllers/thoughtControllers");
+
+//get all and post thought
+router.route("/").get(getThought).post(createThought);
+
+//get one thought, put, delete by Id
