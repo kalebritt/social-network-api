@@ -16,3 +16,10 @@ const {
 router.route("/").get(getThought).post(createThought);
 
 //get one thought, put, delete by Id
+router
+  .route("/:thoughtId")
+  .get(getSingleThought)
+  .put(updateThought)
+  .delete(deleteThought);
+
+  ///api/thoughts/:thougthId/reations Post new reactions
