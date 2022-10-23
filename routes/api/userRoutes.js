@@ -16,4 +16,6 @@ const {
 router.route("/").get(getUser).post(createUser);
 
 //get one, put and delete by user Id
+router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
+//delete friend by Id
