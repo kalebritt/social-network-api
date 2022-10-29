@@ -19,5 +19,15 @@ const userController = {
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
   },
-//   get all users
+  //   get all users
+  getAllUsers(req, res) {
+    User.find()
+      .select("__v")
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
+//   get user by id
 };
