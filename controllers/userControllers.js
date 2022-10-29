@@ -12,3 +12,12 @@ const { User, Thought } = require("../models");
 // }
 // };
 
+const userController = {
+  // create new user
+  createUser(req, res) {
+    User.create(req.body)
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => res.status(500).json(err));
+  },
+//   get all users
+};
