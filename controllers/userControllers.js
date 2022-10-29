@@ -30,4 +30,8 @@ const userController = {
       });
   },
 //   get user by id
+getSingleUser(req,res) {
+    User.findOne({ _id: req.params.userId }).populate("thoughts").populate("friends").select("-__v")
+    // what if no user is found?
+}
 };
