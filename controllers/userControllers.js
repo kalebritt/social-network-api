@@ -29,9 +29,26 @@ const userController = {
         res.status(500).json(err);
       });
   },
-//   get user by id
-getSingleUser(req,res) {
-    User.findOne({ _id: req.params.userId }).populate("thoughts").populate("friends").select("-__v")
-    // what if no user is found?
-}
+  //   get user by id
+  getSingleUser(req, res) {
+    User.findOne({ _id: req.params.userId })
+      .populate("thoughts")
+      .populate("friends")
+      .select("-__v")
+      // what if no user is found?
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          return res
+            .status(404)
+            .json({ message: "No user with that ID, buddy." });
+        }
+        res.json(dbUserData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
+
+  // update current user by ID
 };
