@@ -51,4 +51,26 @@ const userController = {
   },
 
   // update current user by ID
+  updateUser(req, res) {
+    User.findOneAndUpdate(
+      { _id: params.userId },
+      { $set: req.body },
+      {
+        new: true,
+        runValidators: true,
+      }
+    )
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          return res
+            .status(404)
+            .json({ message: "No User with this particular ID!" });
+        }
+        res.json(dbUserData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
