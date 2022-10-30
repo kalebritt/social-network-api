@@ -130,3 +130,6 @@ const userController = {
       });
   },
 };
+
+// module.exports
+module.exports = userController;
