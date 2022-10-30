@@ -60,4 +60,20 @@ const thoughtController = {
         res.status(500).json(err);
       });
   },
+  //   delete thought
+  deleteThought(req, res) {
+    Thought.findOneAndDelete({ _id: req.params.ThoughtId })
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res
+            .status(404)
+            .json({ message: "No User with this particular ID!" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
