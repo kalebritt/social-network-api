@@ -89,4 +89,24 @@ const userController = {
         res.status(500).json(err);
       });
   },
+  // add friend
+  addFriend(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $addToSet: { friends: params.friendId } },
+      { new: true }
+    )
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          return res
+            .status(404)
+            .json({ message: "No User with this particular ID!" });
+        }
+        res.json(dbUserData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
