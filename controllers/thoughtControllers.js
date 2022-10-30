@@ -37,4 +37,5 @@ const thoughtController = {
         res.status(500).json(err);
       });
   },
+//   update current user by id
 };
