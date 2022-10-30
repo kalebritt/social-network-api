@@ -37,5 +37,27 @@ const thoughtController = {
         res.status(500).json(err);
       });
   },
-//   update current user by id
+  //   update current user by id
+  updateThought(req, res) {
+    Users.findOneAndUpdate(
+      { _id: req.params.thoughtId },
+      { $set: req.body },
+      {
+        new: true,
+        runValidators: true,
+      }
+    )
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res
+            .status(404)
+            .json({ message: "No User with this particular ID!" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
