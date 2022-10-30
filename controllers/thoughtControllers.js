@@ -21,4 +21,20 @@ const thoughtController = {
         res.status(500).json(err);
       });
   },
+  //   get single user by id
+  getSingleThought(req, res) {
+    Thought.findOne({ _id: req.params.thoughtId })
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res
+            .status(404)
+            .json({ message: "No User with this particular ID!" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
