@@ -10,5 +10,15 @@ const thoughtController = {
       .catch((err) => res.status(400).json(err));
   },
 
-//   get thoughts here
+  //   get thoughts here
+  getAllThoughts(req, res) {
+    Thought.find()
+      // sort users thoughts
+      .sort({ createdAt: -1 })
+      .then((dbThoughtData) => res.json(dbThoughtData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  },
 };
