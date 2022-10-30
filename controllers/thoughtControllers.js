@@ -117,3 +117,6 @@ const thoughtController = {
       });
   },
 };
+
+// module.exports
+module.exports = thoughtController;
