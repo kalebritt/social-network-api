@@ -30,7 +30,6 @@ friends for friends!
 
 # Technologies:computer:
 [-JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)<br>
-[-Express: Handlebars](https://handlebarsjs.com/)<br>
 [-Node.js](https://nodejs.org/en/)<br>
 [-MySQL](https://www.mysql.com/)<br>
 [-Mongoose](https://mongoosejs.com/)
